@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2114511863902810143, guid: 357ed7b97e232954680b21f76b52159e, type: 3}
+      propertyPath: isPlaceable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3058055577027824035, guid: 357ed7b97e232954680b21f76b52159e, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -57,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6194094827411504594, guid: 357ed7b97e232954680b21f76b52159e, type: 3}
       propertyPath: m_Name
-      value: Tile_RoadStraight
+      value: Tile_Road_Straight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 357ed7b97e232954680b21f76b52159e, type: 3}
