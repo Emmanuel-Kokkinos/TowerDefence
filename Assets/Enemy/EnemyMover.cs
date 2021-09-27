@@ -7,6 +7,8 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] List<Waypoint> path = new List<Waypoint>();
     [SerializeField] [Range(0f, 5f)] float speed = 1f;
 
+    Enemy enemy;
+
     // OnEnable is what is called when a gameobject is enabled in the inspector
     // In this case: When an enemy is 'spawned'
     void OnEnable()
@@ -14,6 +16,11 @@ public class EnemyMover : MonoBehaviour
         FindPath();
         ReturnToStart();
         StartCoroutine(FollowPath());
+    }
+
+    void Start()
+    {
+        enemy = GetComponent<Enemy>();
     }
 
     //Makes sure the enemies spawn/start at the first tile of the path
@@ -54,6 +61,7 @@ public class EnemyMover : MonoBehaviour
             }
         }
 
+        enemy.StealGold();
         gameObject.SetActive(false);
     }
 }
