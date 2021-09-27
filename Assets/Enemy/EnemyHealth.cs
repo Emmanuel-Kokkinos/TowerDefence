@@ -7,8 +7,9 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] int maxHealth = 5;
     [SerializeField] int currentHealth = 0;
 
-    // Start is called before the first frame update
-    void Start()
+    // OnEnable is what is called when a gameobject is enabled in the inspector
+    // In this case: When an enemy is 'spawned'
+    void OnEnable()
     {
         currentHealth = maxHealth;
     }
@@ -24,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
