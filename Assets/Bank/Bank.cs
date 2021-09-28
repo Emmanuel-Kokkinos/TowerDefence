@@ -22,6 +22,12 @@ public class Bank : MonoBehaviour
     {
         currentBalance += Mathf.Abs(amount);
         UpdateDisplay();
+
+        if (currentBalance > 1000)
+        {
+            //Win the game
+            ReloadScene();
+        }
     }
 
     public void Withdraw(int amount)
